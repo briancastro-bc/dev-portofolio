@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Kanit:wght@100;200;400;700;900&family=Poppins:ital,wght@0,200;0,400;1,500&family=Pridi:wght@200;300;400;600&family=Sora:wght@400;600;800&display=swap');
+
+:root {
+    /* LIGHT THEME */
+    --light-color: rgba(255, 255, 255, 1);
+    --light-blue: #d8dee9;
+    --light-gray: #E5E9F0;
+    --light-white: #ECEFF4;
+    /* DARK THEME */
+    --dark-color: #2E3440;
+    --dark-gray: #3B4252;
+    --dark-blue: #434C5E;
+    --dark-light: #4C566A;
+    --dark-blue-light: #81A1C1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    //font-family: 'Pridi', serif;
+}
+
+#no-script-content {
+    background-color: var(--light-white);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+
+    .title {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        text-shadow: 2px 2px var(--dark-color);
+        word-spacing: .5rem;
+    }
+
+    .sub-title {
+        font-size: 2rem;
+        margin-bottom: .5rem;
+        font-style: italic;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 410px){
+    #no-script-content {
+        text-align: center;
+        padding: 0 1rem;
+
+        .title {
+            font-size: 3rem;
+        }
+
+        .sub-title {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
