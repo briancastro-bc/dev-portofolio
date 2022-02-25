@@ -1,0 +1,76 @@
+:host ::ng-deep {
+
+    .navbar {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        width: 100%;
+        padding: 1.7rem 2.3rem;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        align-self: center;
+        font-size: 1.4rem;
+        z-index: 1000;
+
+        .name {
+            font-family: 'Pridi', serif;
+            font-weight: 500;
+            letter-spacing: .1rem;
+            position: relative;
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                color: var(--light-gray);
+            }
+        }
+
+        .links {
+            display: flex;
+
+            .link {
+                display: block;
+                text-decoration: none;
+                margin-right: 1rem;
+                color: rgba(0, 0, 0, 0.857);
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.5);
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        bottom: 0;
+                        border-top: 1px solid black;
+                        //transition: border-top ease-in-out 1s;
+                    }
+                }
+            }
+
+            .social-media {
+                display: flex;
+
+                a {
+                    display: block;
+                    margin-right: 1rem;
+                    letter-spacing: .1rem;
+                    color: black;
+                }
+
+                .github:hover {
+                    color: #171515;
+                }
+
+                .youtube:hover {
+                    color: #c4302b;
+                }
+
+                .toggle-mode {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
