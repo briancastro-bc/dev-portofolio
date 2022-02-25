@@ -1,4 +1,4 @@
-:host ::ng-deep {
+/*:host ::ng-deep {
     .home {
 
         .home-container {
@@ -56,12 +56,37 @@
                 }
 
                 .home-scroll {
-                    /* display: none; */
+                    /* display: none; *
 
                     .home-scroll-button {
                         color: var(--dark-gray);
                         transition: .3s;
                     }
+                }
+            }
+        }
+    }
+}*/
+
+:host {
+    #home {
+        height: 100vh;
+
+        .home-container {
+            padding: 0 10rem;
+
+            .home-content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 50vh;
+                align-items: center;
+                align-content: center;
+
+                .home-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                 }
             }
         }

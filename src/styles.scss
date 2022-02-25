@@ -1,8 +1,11 @@
+@use 'normalize';
+@import './sass/variables';
+
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Kanit:wght@100;200;400;700;900&family=Poppins:ital,wght@0,200;0,400;1,500&family=Pridi:wght@200;300;400;600&family=Sora:wght@400;600;800&display=swap');
-@import "./normalize.css";
 
 :root {
-
+    --primary-color: hsl($main-color, 32%, 63%);
+    --primary-color-alt: hsl($main-color, 35%, 55%);
 
     /* LIGHT THEME */
     --light-color: rgba(255, 255, 255, 1);
@@ -15,18 +18,41 @@
     --dark-blue: #434C5E;
     --dark-light: #4C566A;
     --dark-blue-light: #81A1C1;
+
+    /* Font sizes */
+    --big-font-size: $big-font-size;
+    --normal-font-size: $normal-font-size;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Kanit', sans-serif;
-    //font-family: 'Pridi', serif;
+    margin: 0;
+    padding: 0;
+    font-family: $primary-font;
+    font-size: $normal-font-size;
+    color: $text-color;
+}
+
+h1,h2,h3,h4,h5 {
+    color: $title-color;
+    font-weight: $font-semibold;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 #no-script-content {
