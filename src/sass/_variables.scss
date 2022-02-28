@@ -1,11 +1,11 @@
 
 /* Main color for dark/light theme */
-$main-color: 210;
+$hue-color: 281;
 
 /* Colors */
-$title-color: hsl($main-color, 8%, 15%);
-$text-color: hsl($main-color, 8%, 45%);
-$body-color: hsl($main-color, 69%, 61%);
+$title-color: hsl($hue-color, 8%, 15%);
+$text-color: hsl($hue-color, 8%, 45%);
+$body-color: hsl($hue-color, 69%, 61%);
 
 /* Fonts families */
 $primary-font: 'Kanit', sans-serif;
@@ -14,7 +14,7 @@ $primary-serif-font: 'Pridi', serif;
 
 /* Font sizes */
 $big-font-size: 2rem;
-$h1-font-size: 1.5rem;
+$h1-font-size: 3rem;
 $h2-font-size: 1.25rem;
 $h3-font-size: 1.125rem;
 $normal-font-size: 1rem;

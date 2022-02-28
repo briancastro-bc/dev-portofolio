@@ -9,6 +9,8 @@
         position: sticky;
         position: -webkit-sticky;
         padding: $base-padding;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
         display: flex;
         -webkit-box-pack: justify;
         justify-content: space-between;
