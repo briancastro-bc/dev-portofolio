@@ -16,7 +16,8 @@
         justify-content: space-between;
         align-items: center;
         font-size: $navbar-font-size;
-        background-color: var(--light-color);
+        background-color: var(--dark-color);
+        overflow: hidden;
         z-index: 1000;
 
         .name {
@@ -24,10 +25,10 @@
             font-size: calc($navbar-font-size + .25rem);
             letter-spacing: .1rem;
             position: relative;
-            color: black;
+            color: var(--light-color);
 
             &:hover {
-                color: var(--light-gray);
+                color: var(--light-gray-color);
             }
 
             &::after {
@@ -42,17 +43,20 @@
                 display: block;
                 text-decoration: none;
                 margin-right: 1rem;
-                color: rgba(0, 0, 0, 0.857);
+                color: var(--light-color);
 
                 &:hover {
-                    color: rgba(0, 0, 0, 0.5);
+                    color: var(--primary-color-alt);
+                }
+            }
 
-                    /*&::after {
-                        content: '';
-                        display: block;
-                        bottom: 0;
-                        border-top: 1px solid black;
-                    }*/
+            .active {
+                color: var(--primary-color);
+                &::after {
+                    content: '';
+                    display: block;
+                    bottom: 0;
+                    border-top: 2px solid var(--primary-color);
                 }
             }
 
@@ -63,7 +67,7 @@
                     display: block;
                     margin-right: .8rem;
                     letter-spacing: .1rem;
-                    color: gray;
+                    color: var(--light-gray-color);
                 }
 
                 .github:hover {
@@ -105,7 +109,6 @@
     }
 
     @media screen and (max-width: 480px) {
-
         .navbar {
             padding: calc($base-padding - 1rem);
 
@@ -118,6 +121,4 @@
         }
         
     }
-
-
 }

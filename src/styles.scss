@@ -4,20 +4,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Kanit:wght@100;200;400;700;900&family=Poppins:ital,wght@0,200;0,400;1,500&family=Pridi:wght@200;300;400;600&family=Sora:wght@400;600;800&display=swap');
 
 :root {
-    --primary-color: hsl(var($hue-color), 60%, 50%);
-    --primary-color-alt: hsl(var($hue-color), 35%, 55%);
+
+    --hue-color: 210;
+
+    --primary-color: hsl(var(--hue-color), 60%, 50%);
+    --primary-color-alt: hsl(var(--hue-color), 35%, 55%);
 
     /* LIGHT THEME */
-    --light-color: rgba(255, 255, 255, 1);
-    --light-blue: #d8dee9;
-    --light-gray: #E5E9F0;
-    --light-white: #ECEFF4;
+    --light-color: hsl(0, 0%, 100%);
+    --light-blue-color: hsl(219, 28%, 88%);
+    --light-gray-color: hsl(220, 12%, 85%);
+    --light-white-color: hsl(218, 27%, 94%);
+
     /* DARK THEME */
-    --dark-color: #2E3440;
-    --dark-gray: #3B4252;
-    --dark-blue: #434C5E;
-    --dark-light: #4C566A;
-    --dark-blue-light: #81A1C1;
+    --dark-color: hsl(220, 16%, 22%);
+    --dark-gray-color: hsl(222, 16%, 28%);
+    --dark-blue-color: hsl(220, 17%, 32%);
+    --dark-light-color: hsl(220, 16%, 36%);
+    --dark-blue-light-color: hsl(210, 34%, 63%);
 
     /* Font sizes */
     --big-font-size: $big-font-size;
@@ -40,10 +44,15 @@ body {
     font-family: $primary-font;
     font-size: $normal-font-size;
     color: $text-color;
+
+}
+
+body.dark-mode {
+    background-color: var(--dark-color);
+    color: var(--light-color);
 }
 
 h1,h2,h3,h4,h5 {
-    color: $title-color;
     font-weight: $font-semibold;
 }
 
