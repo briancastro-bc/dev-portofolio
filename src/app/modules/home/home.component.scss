@@ -1,5 +1,25 @@
 :host {
 
+    .base-section {
+        height: calc(100vh - 64px);
+        min-height: 100%;
+        width: 100%;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 20px;
+            background-color: var(--primary-color);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    }
+
     .home {
         height: calc(100vh - 64px);
         min-height: 100%;
@@ -22,7 +42,7 @@
                 flex-direction: column;
                 flex-shrink: 1;
                 max-width: 35rem;
-                padding: 1em 3em;
+                padding: 1em 2em;
 
                 .title {
                     margin: 0;
@@ -36,10 +56,16 @@
                     margin: 0;
                     font-size: 2rem;
                     letter-spacing: 2px;
-                    color: var(--light-blue-color);
+                    color: var(--primary-color);
+
+                    &::selection {
+                        color: var(--light-color);
+                    }
                 }
 
                 .description {
+                    font-family:'Courier New', Courier, monospace, sans-serif;
+                    text-transform: uppercase;
                     overflow: hidden;
                     border-right: .2em solid var(--light-color);
                     white-space: nowrap;
@@ -138,6 +164,40 @@
                 }
             }
         }
+    }
+
+    .skills {
+        text-align: center;
+        animation: 1s ease-in fadeIn 0s forwards;
+
+        .header {
+
+            .title {
+                font-size: 3rem;
+                font-weight: 700;
+                letter-spacing: 3px;
+            }
+        }
+
+        .skills-grid {
+            justify-content: center;
+            margin: 5rem 0 0 0;
+
+            .field {
+                justify-self: center;
+            }
+        }
+
+        /*.skills-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+
+            .skill-name {
+                margin: 0 0 1rem 0;
+            }
+        }*/
     }
 
     @keyframes fadeIn {

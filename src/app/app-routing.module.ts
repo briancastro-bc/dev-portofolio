@@ -15,9 +15,23 @@ const routes: Routes = [
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule) 
   },
   { 
+    path: 'about', 
+    data: {
+      title: 'About'
+    },
+    loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule) 
+  },
+  { 
+    path: 'contact', 
+    data: {
+      title: 'Contact'
+    },
+    loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule) 
+  },
+  { 
     path: '404', 
     data: {
-      title: '404 Not Found'
+      title: 'Page Not Found'
     },
     loadChildren: () => import('./modules/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
   },

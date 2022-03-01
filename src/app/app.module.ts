@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { ConfirmationService } from 'primeng/api';
 
 import { environment } from '@env/environment';
 import { AppRoutingModule } from '@app/app-routing.module';
@@ -24,7 +25,9 @@ import { SharedModule } from '@shared/shared.module';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [],
+  providers: [
+    ConfirmationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

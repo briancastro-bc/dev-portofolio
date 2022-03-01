@@ -5,7 +5,8 @@
 
 :root {
 
-    --hue-color: 210;
+    /* 180, 0 */
+    --hue-color: 180;
 
     --primary-color: hsl(var(--hue-color), 60%, 50%);
     --primary-color-alt: hsl(var(--hue-color), 35%, 55%);
@@ -45,15 +46,34 @@ body {
     font-size: $normal-font-size;
     color: $text-color;
 
-}
+    &.dark-mode {
+        background-color: var(--dark-color);
+        color: var(--light-color);
+    }
 
-body.dark-mode {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    &::-webkit-scrollbar {
+        width: 8px;
+        overflow: auto;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: var(--light-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: var(--primary-color);
+    }
 }
 
 h1,h2,h3,h4,h5 {
     font-weight: $font-semibold;
+}
+
+h1, h2, h3, h4, h5, p {
+    &::selection {
+        background-color: transparent;
+        color: var(--primary-color);
+    }
 }
 
 a {
@@ -68,7 +88,7 @@ img {
 /* CUSTOM STYLES */
 .button {
     display: inline-block;
-    padding: 1rem;
+    padding: .8rem;
     color: white;
     background-color: var(--primary-color);
     border-radius: 5px;
@@ -137,4 +157,14 @@ img {
             font-size: 16px;
         }
     }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes levelUp {
+    from { width: 0; }
+    to { width: 100%; }
 }

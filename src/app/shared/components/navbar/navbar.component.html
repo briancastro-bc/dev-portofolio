@@ -9,22 +9,23 @@
         <a class="link" routerLink="about" routerLinkActive="active">
             About
         </a>
-        <a class="link" routerLink="resume" routerLinkActive="active">
-            Resume
+        <a class="link" routerLink="contact" routerLinkActive="active">
+            Contact
         </a>
         <div class="social-media">
-            <a class="github" href="https://github.com/briancastro-bc" target="_blank">
+            <a class="resume" (click)="confirmDownload()" download pTooltip="Resume" tooltipPosition="bottom">
+                <i class="uil uil-user-square"></i>
+            </a>
+            <a class="github" href="https://github.com/briancastro-bc" target="_blank" pTooltip="Github" tooltipPosition="bottom">
                 <i class="uil uil-github"></i>
             </a>
-            <a class="youtube" href="https://www.youtube.com/channel/UC-F8g4frLRTvcEj7Qh9NKZw" target="_blank">
+            <a class="youtube" href="https://www.youtube.com/channel/UC-F8g4frLRTvcEj7Qh9NKZw" target="_blank" pTooltip="Youtube" tooltipPosition="bottom">
                 <i class="uil uil-youtube"></i>
             </a>
-            <a class="discord" href="#">
-                <i class="uil uil-discord"></i>
-            </a>
-            <a class="toggle-mode">
+            <a class="toggle-mode" pTooltip="Theme" tooltipPosition="bottom">
                 <i class="uil uil-moonset"></i>
             </a>
         </div>
     </nav>
 </header>
+<p-confirmDialog></p-confirmDialog>

@@ -4,7 +4,7 @@
             <h1 class="title">Hello! I'm Brian Castro</h1>
             <h2 class="subtitle">Backend Developer</h2>
             <p class="description">Junior developer on Python programming language</p>
-            <a routerLink="contact" class="button button-flex">
+            <a routerLink="/contact" class="button button-flex">
                 Contact <i class="icon uil uil-message button-icon"></i>
             </a>
         </div>
@@ -53,6 +53,23 @@
             <a routerLink="about" class="button button-flex">
                 Contact Me <i class="uil uil-message button-icon"></i>
             </a>
+        </div>
+    </div>
+</section>
+<section class="skills base-section">
+    <div class="header">
+        <h2 class="title">Skills</h2>
+    </div>
+    <!--<div class="skills-content" *ngFor="let skill of skills">
+        <div class="skills-section">
+            <p-knob [(ngModel)]="skill.value" [name]="skill.name" [valueTemplate]="skill.value" [size]="200" [readonly]="true"></p-knob>
+            <h3 class="skill-name">{{ skill.name }}</h3>
+        </div>
+    </div>-->
+    <div class="skills-grid grid text-center">
+        <div class="field col-10 md:col-4" *ngFor="let skill of skills">
+            <p-knob [(ngModel)]="skill.value" [name]="skill.name" [valueTemplate]="skill.value" [size]="200" [readonly]="true"></p-knob>
+            <h3 class="skill-name">{{ skill.name }}</h3>
         </div>
     </div>
 </section>
