@@ -65,6 +65,32 @@ img {
     height: auto;
 }
 
+/* CUSTOM STYLES */
+.button {
+    display: inline-block;
+    padding: 1rem;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    width: 10rem;
+
+    &:hover {
+        background-color: var(--primary-color-alt);
+        box-shadow: 5px 5px 15px black;
+    }
+
+    .icon {
+        margin-left: 0.25rem;
+    }
+}
+
+.button-flex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #no-script-content {
     background-color: var(--light-white);
     height: 100vh;

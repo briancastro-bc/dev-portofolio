@@ -4,11 +4,14 @@
     $navbar-font-size: 1.25rem;
 
     .navbar {
+        background-color: var(--dark-color);
         width: 100%;
         top: 0;
+        overflow: hidden;
+        padding: $base-padding;
+        transition: 0.4s;
         position: sticky;
         position: -webkit-sticky;
-        padding: $base-padding;
         padding-bottom: 1rem;
         padding-top: 1rem;
         display: flex;
@@ -16,8 +19,6 @@
         justify-content: space-between;
         align-items: center;
         font-size: $navbar-font-size;
-        background-color: var(--dark-color);
-        overflow: hidden;
         z-index: 1000;
 
         .name {

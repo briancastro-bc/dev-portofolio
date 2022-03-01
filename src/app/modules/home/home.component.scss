@@ -26,12 +26,27 @@
 
                 .title {
                     margin: 0;
+                    margin-bottom: 1rem;
+                    line-height: 100%;
+                    letter-spacing: 2px;
                     font-size: 3em;
                 }
 
                 .subtitle {
                     margin: 0;
-                    font-size: 2.2rem;
+                    font-size: 2rem;
+                    letter-spacing: 2px;
+                    color: var(--light-blue-color);
+                }
+
+                .description {
+                    overflow: hidden;
+                    border-right: .2em solid var(--light-color);
+                    white-space: nowrap;
+                    //margin: 0;
+                    margin-bottom: 1rem;
+                    letter-spacing: 1px;
+                    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
                 }
             }
 
@@ -48,6 +63,30 @@
                 }
             }
         }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .home {
+
+            .home-content {
+                .home-info {
+                    justify-content: center;
+
+                    .description {
+                        white-space: normal;
+                    }
+                }
+
+                .home-image {
+                    display: none;
+
+                    .blob {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 
     .about {
@@ -57,13 +96,7 @@
         overflow-y: auto;
         font-size: 1rem;
         background: var(--dark-gray-color);
-        //border-radius: 70% 30% 0% 0%;
         animation: 1s ease-in fadeIn 0s forwards;
-
-        &::before {
-            position: relative;
-            border-top-left-radius: 40%;
-        }
 
         .about-content {
             align-items: center;
@@ -110,5 +143,15 @@
     @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: var(--light-color); }
     }
 }
