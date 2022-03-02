@@ -6,7 +6,7 @@
 :root {
 
     /* 180, 0 */
-    --hue-color: 180;
+    --hue-color: 260;
 
     --primary-color: hsl(var(--hue-color), 60%, 50%);
     --primary-color-alt: hsl(var(--hue-color), 35%, 55%);
@@ -109,6 +109,26 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.base-section {
+    height: calc(100vh - 64px);
+    min-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: var(--primary-color);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
 }
 
 #no-script-content {

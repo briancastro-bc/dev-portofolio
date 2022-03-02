@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { TooltipModule } from 'primeng/tooltip';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { KnobModule } from 'primeng/knob';
+import { ScrollTopModule } from 'primeng/scrolltop';
 
 import { NavbarComponent } from '@shared/components/navbar/navbar.component';
 import { FooterComponent } from '@shared/components/footer/footer.component';
@@ -21,6 +22,7 @@ import { FooterComponent } from '@shared/components/footer/footer.component';
     TooltipModule,
     ConfirmDialogModule,
     KnobModule,
+    ScrollTopModule,
   ],
   exports: [
     NavbarComponent,
@@ -29,6 +31,7 @@ import { FooterComponent } from '@shared/components/footer/footer.component';
     TooltipModule,
     ConfirmDialogModule,
     KnobModule,
+    ScrollTopModule,
   ]
 })
 export class SharedModule { }

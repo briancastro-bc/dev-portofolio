@@ -3,7 +3,7 @@
         <div class="home-info">
             <h1 class="title">Hello! I'm Brian Castro</h1>
             <h2 class="subtitle">Backend Developer</h2>
-            <p class="description">Junior developer on Python programming language</p>
+            <p class="description">A passionated, focused in Junior developer on backend programming</p>
             <a routerLink="/contact" class="button button-flex">
                 Contact <i class="icon uil uil-message button-icon"></i>
             </a>
@@ -21,7 +21,7 @@
                     165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                     129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                    <image href=""/>
+                    <image href="assets/me.svg" height="200" width="200"/>
                 </g>
             </svg>
         </div>
@@ -48,10 +48,11 @@
         </div>
         <div class="about-info">
             <h1 class="title">About Me</h1>
-            <h2 class="subtitle">Backend Developer</h2>
-            <p class="description">Junior developer on Python programming language</p>
-            <a routerLink="about" class="button button-flex">
-                Contact Me <i class="uil uil-message button-icon"></i>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nemo rem vitae harum consequuntur voluptates debitis labore officia molestias, deleniti iure sed praesentium doloribus id soluta mollitia illo dolores veniam.
+            </p>
+            <a routerLink="/about" class="button button-flex">
+                Read More <i class="icon uil uil-message button-icon"></i>
             </a>
         </div>
     </div>
@@ -60,15 +61,10 @@
     <div class="header">
         <h2 class="title">Skills</h2>
     </div>
-    <!--<div class="skills-content" *ngFor="let skill of skills">
-        <div class="skills-section">
-            <p-knob [(ngModel)]="skill.value" [name]="skill.name" [valueTemplate]="skill.value" [size]="200" [readonly]="true"></p-knob>
-            <h3 class="skill-name">{{ skill.name }}</h3>
-        </div>
-    </div>-->
     <div class="skills-grid grid text-center">
         <div class="field col-10 md:col-4" *ngFor="let skill of skills">
             <p-knob [(ngModel)]="skill.value" [name]="skill.name" [valueTemplate]="skill.value" [size]="200" [readonly]="true"></p-knob>
+            <img class="skill-image" src="assets/logos/{{skill.name.toLowerCase()}}.svg" alt="{{skill.name}} logo">
             <h3 class="skill-name">{{ skill.name }}</h3>
         </div>
     </div>

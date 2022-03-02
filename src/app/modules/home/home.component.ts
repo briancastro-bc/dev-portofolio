@@ -26,11 +26,11 @@ export class HomeComponent implements OnInit {
         value: '70'
       },
       {
-        name: 'C#',
+        name: 'C-Sharp',
         value: '60'
       },
       {
-        name: 'HTML',
+        name: 'HTML5',
         value: '90'
       },
       {

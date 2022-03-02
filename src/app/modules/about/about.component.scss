@@ -1,0 +1,12 @@
+.about-background {
+    overflow-y: hidden;
+    max-height: 100%;
+
+    .background-image {
+        height: 50vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}

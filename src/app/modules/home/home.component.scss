@@ -1,25 +1,5 @@
 :host {
 
-    .base-section {
-        height: calc(100vh - 64px);
-        min-height: 100%;
-        width: 100%;
-        overflow-y: auto;
-
-        &::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            border-radius: 20px;
-            background-color: var(--primary-color);
-        }
-
-        &::-webkit-scrollbar-track {
-            background-color: transparent;
-        }
-    }
-
     .home {
         height: calc(100vh - 64px);
         min-height: 100%;
@@ -68,8 +48,7 @@
                     text-transform: uppercase;
                     overflow: hidden;
                     border-right: .2em solid var(--light-color);
-                    white-space: nowrap;
-                    //margin: 0;
+                    //white-space: nowrap;
                     margin-bottom: 1rem;
                     letter-spacing: 1px;
                     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
@@ -85,35 +64,13 @@
                 padding: 1em 3em;
 
                 .blob {
-                    fill: var(--primary-color-alt);
+                    fill: var(--primary-color);
                 }
             }
         }
 
     }
 
-    @media screen and (max-width: 768px) {
-        .home {
-
-            .home-content {
-                .home-info {
-                    justify-content: center;
-
-                    .description {
-                        white-space: normal;
-                    }
-                }
-
-                .home-image {
-                    display: none;
-
-                    .blob {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
 
     .about {
         height: calc(100vh - 64px);
@@ -134,20 +91,20 @@
 
             .about-info {
                 display: inline-flex;
-                flex-basis: 35rem;
+                //flex-basis: 35rem;
                 flex-direction: column;
-                flex-shrink: 1;
+                //flex-shrink: 1;
                 max-width: 35rem;
-                padding: 1em 3em;
+                padding: 1em 2em;
 
                 .title {
                     margin: 0;
                     font-size: 3em;
                 }
 
-                .subtitle {
-                    margin: 0;
-                    font-size: 2.2rem;
+                .description {
+                    margin: 0 0 1rem 0;
+                    font-size: 1.25rem;
                 }
             }
 
@@ -157,10 +114,10 @@
                 flex-direction: column;
                 flex-basis: 45%;
                 overflow: hidden;
-                padding: 1em 3em;
+                padding: 1em 2em;
 
                 .blob {
-                    fill: var(--primary-color);
+                    fill: var(--primary-color-alt);
                 }
             }
         }
@@ -185,19 +142,59 @@
 
             .field {
                 justify-self: center;
+
+                .skill-image {
+                    height: 50px;
+                    width: 50px;
+                }
+
+                .skill-name {
+                    margin: 0rem 0 0 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .home {
+            .home-content {
+                .home-info {
+                    justify-content: center;
+
+                    .description {
+                        white-space: normal;
+                    }
+                }
+
+                .home-image {
+                    display: none;
+
+                    .blob {
+                        display: none;
+                    }
+                }
             }
         }
 
-        /*.skills-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-content: center;
+        .about {
+            .about-content {
+                flex-direction: column;
 
-            .skill-name {
-                margin: 0 0 1rem 0;
+                .about-info {
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .about-image {
+                    display: none;
+                    
+                    .blob {
+                        display: none;
+                    }
+                }
             }
-        }*/
+        }
     }
 
     @keyframes fadeIn {
