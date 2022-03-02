@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
       header: 'Download',
       closeOnEscape: true,
       accept: () => {
-        document.location.href = './assets/resume.pdf'
+        document.location.href = 'assets/briancastro-resume.pdf'
       },
       reject: () => {
         console.log('Rejected');
