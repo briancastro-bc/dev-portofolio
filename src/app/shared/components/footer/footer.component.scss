@@ -1,14 +1,14 @@
 .footer {
-    //background-color: var(--dark-color);
+    //background-color: transparent;
     width: 100%;
     bottom: 0;
     padding: 1rem 2rem;
-    position: sticky;
+    position: fixed;
     position: -webkit-sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
+    //z-index: -1;
 
     .footer-start {
         justify-content: start;

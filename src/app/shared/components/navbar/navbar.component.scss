@@ -54,7 +54,7 @@
                         display: block;
                         bottom: 0;
                         border-top: 2px solid var(--primary-color);
-                        animation: .5s levelUp linear;
+                        animation: .5s levelUp ease-in alternate;
                     }
                 }
             }

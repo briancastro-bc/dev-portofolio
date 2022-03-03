@@ -5,8 +5,8 @@
 
 :root {
 
-    /* 180, 0 */
-    --hue-color: 260;
+    /* 180, 0, 260 */
+    --hue-color: 180;
 
     --primary-color: hsl(var(--hue-color), 60%, 50%);
     --primary-color-alt: hsl(var(--hue-color), 35%, 55%);
@@ -80,6 +80,11 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-family: 'Pridi', serif;
+    font-weight: 300;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -130,6 +135,16 @@ img {
         background-color: transparent;
     }
 }
+
+.text-primary {
+    color: var(--light-color) !important;
+
+    &::selection {
+        color: var(--primary-color) !important;
+    }
+}
+
+/* END CUSTOM STYLES */
 
 #no-script-content {
     background-color: var(--light-white);
@@ -187,4 +202,24 @@ img {
 @keyframes levelUp {
     from { width: 0; }
     to { width: 100%; }
+}
+
+@keyframes levelDown {
+    from { width: 100%; }
+    to { width: 0; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--light-color); }
+}
+
+@keyframes translateY {
+    from { transform: translateY(0); }
+    to { transform: translateY(1rem); }
 }
