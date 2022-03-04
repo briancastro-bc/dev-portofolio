@@ -11,23 +11,19 @@ import { AppComponent } from '@app/app.component';
 import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    SharedModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      registrationStrategy: 'registerWhenStable:30000'
-    })
-  ],
-  providers: [
-    ConfirmationService
-  ],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		HttpClientModule,
+		AppRoutingModule,
+		SharedModule,
+		ServiceWorkerModule.register('ngsw-worker.js', {
+			enabled: environment.production,
+			registrationStrategy: 'registerWhenStable:30000',
+		}),
+	],
+	providers: [ConfirmationService],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

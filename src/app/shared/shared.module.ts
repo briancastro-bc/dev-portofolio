@@ -12,26 +12,23 @@ import { NavbarComponent } from '@shared/components/navbar/navbar.component';
 import { FooterComponent } from '@shared/components/footer/footer.component';
 
 @NgModule({
-  declarations: [
-    NavbarComponent,
-    FooterComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    TooltipModule,
-    ConfirmDialogModule,
-    KnobModule,
-    ScrollTopModule,
-  ],
-  exports: [
-    NavbarComponent,
-    FooterComponent,
-    RouterModule,
-    TooltipModule,
-    ConfirmDialogModule,
-    KnobModule,
-    ScrollTopModule,
-  ]
+	declarations: [NavbarComponent, FooterComponent],
+	imports: [
+		CommonModule,
+		RouterModule,
+		TooltipModule,
+		ConfirmDialogModule,
+		KnobModule,
+		ScrollTopModule,
+	],
+	exports: [
+		NavbarComponent,
+		FooterComponent,
+		RouterModule,
+		TooltipModule,
+		ConfirmDialogModule,
+		KnobModule,
+		ScrollTopModule,
+	],
 })
-export class SharedModule { }
+export class SharedModule {}
