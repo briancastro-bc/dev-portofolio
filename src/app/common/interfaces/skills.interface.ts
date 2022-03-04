@@ -1,5 +1,4 @@
-
 export interface Skills {
-    name: string;
-    value: string;
+	name: string;
+	value: string;
 }
