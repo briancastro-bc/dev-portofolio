@@ -13,7 +13,7 @@
 	},
 	"scripts": {
 		"ng": "ng",
-		"start": "node server.js",
+		"start": "ng serve",
 		"build": "ng build",
 		"watch": "ng build --watch --configuration development",
 		"preinstall": "npm install -g express path @angular/cli @angular/compiler-cli @angular-devkit/build-angular @angular/localize typescript",
