@@ -16,7 +16,7 @@
 		"start": "ng serve",
 		"build": "ng build",
 		"watch": "ng build --watch --configuration development",
-		"preinstall": "npm install @angular/cli @angular/compiler-cli @angular-devkit/build-angular @angular/localize typescript --force",
+		"preinstall": "npm install @angular/cli@13.2.5 @angular/compiler-cli@13.2.5 @angular-devkit/build-angular @angular/localize@13.2.5 typescript --force",
 		"postinstall": "ng build --prod",
 		"heroku-postbuild": "ng build --prod",
 		"test": "ng test"
